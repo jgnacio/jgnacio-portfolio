@@ -11,7 +11,7 @@ const sketch: Sketch = (p5) => {
   const string = "IGNACIO GOMEZ";
   const leters = string.split("");
   let width = window.innerWidth - window.innerWidth / 18;
-  let height = window.innerHeight - window.innerHeight / 12;
+  let height = window.innerHeight;
   let middleY = height / 2;
   let middleX = width / 2;
   let radio = 600;
@@ -29,7 +29,7 @@ const sketch: Sketch = (p5) => {
     p5.background(0);
     p5.textSize(200);
     const phrase = getRandom(leters);
-    radio += p5.random(-20, 20.4);
+    radio += p5.random(-17, 20.4);
     p5.fill(255);
     p5.text(phrase, middleX - 80, middleY);
     p5.noFill();
