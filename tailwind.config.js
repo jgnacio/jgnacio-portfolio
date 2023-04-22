@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        electric_red: "#EF3054",
+        "electric-red": "#FF0000",
         "shadow-black": "#000000CC"
       },
       boxShadow: {
-        "highlighter-line": `0 3px 0`
+        "highlighter-line": `0 2px 0`
       }
     }
   },
