@@ -19,7 +19,7 @@
   }
 }
 ::selection {
-  background: red;
+  background: #FF0000;
 }
 
 :root {
