@@ -12,7 +12,8 @@ module.exports = {
         "shadow-black": "#000000CC"
       },
       boxShadow: {
-        "highlighter-line": `0 2px 0`
+        "highlighter-line": `0 2px 0`,
+        "highlighter-bg": `0 0 #FFFFFF`
       }
     }
   },

@@ -5,9 +5,9 @@ export default function MenuBar() {
     <div className=" flex items-center px-10 hidden sm:block">
       <ul className="gap-8">
         <div className="flex gap-8">
-          <Menu_link title="Home" href="/" />
-          <Menu_link title="About me" href="#about" />
-          <Menu_link title="Proyects" href="#proyects" />
+          <Menu_link title="Home"/>
+          <Menu_link title="About me"/>
+          <Menu_link title="Proyects"/>
         </div>
       </ul>
     </div>

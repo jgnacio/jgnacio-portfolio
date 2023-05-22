@@ -10,7 +10,7 @@ const cutive_font = Cutive_Mono({
 
 export default function Home() {
   return (
-    <main className={` ${cutive_font.className}`}>
+    <main className={`${cutive_font.className} bg-black`}>
       <Navbar />
       <Hero />
       <Sections />
