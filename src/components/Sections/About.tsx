@@ -1,5 +1,6 @@
 import { Zen_Dots } from "next/font/google";
 import Image from "next/image";
+import Title from "../ui/ShowContent/Title";
 // Text font
 const zen = Zen_Dots({ subsets: ["latin"], weight: "400" });
 
@@ -7,16 +8,9 @@ export default function About() {
   const profileImg =
     "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1689708226/jgnacio-portfolio/profilewithoutbackground.png";
   return (
-    <section className="flex min-h-[80vh] border">
-      <div className="flex flex-col md:flex-row">
-        <div className="flex justify-start items-start absolute">
-          <h1
-            className={`${zen.className} text-4xl md:text-5xl bg-primary text-background px-4 pr-12 title-clip`}
-          >
-            About me
-          </h1>
-        </div>
-        <div className="container flex basis-1/2">
+    <Title title="About">
+      <div className="flex">
+        <div className="container flex justify-center basis-2/3">
           <Image
             src={profileImg}
             width={400}
@@ -26,7 +20,7 @@ export default function About() {
             className="opacity-90"
           />
         </div>
-        <div className="flex justify-center items-center px-4 basis-3/4">
+        <div className="flex justify-center items-center px-4 basis-1/2">
           <p className=" p-4">
             Hello! I'm <b>Ignacio Gómez</b>, a passionate and skilled software
             engineer recently graduated from{" "}
@@ -37,6 +31,6 @@ export default function About() {
           </p>
         </div>
       </div>
-    </section>
+    </Title>
   );
 }

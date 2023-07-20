@@ -3,7 +3,7 @@ import About from "@/components/Sections/About";
 import Education from "@/components/Sections/Education";
 import Hero from "@/components/Sections/Hero";
 import Projects from "@/components/Sections/Projects";
-import TechMarquee from "@/components/Sections/TechMarquee";
+import Technologies from "@/components/Sections/Technologies";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <About />
         <Education />
       </div>
-      <TechMarquee />
+      <Technologies />
       <Projects />
     </main>
   );
