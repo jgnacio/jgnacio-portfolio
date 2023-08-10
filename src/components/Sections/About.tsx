@@ -9,7 +9,7 @@ export default function About() {
     "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1689708226/jgnacio-portfolio/profilewithoutbackground.png";
   return (
     <Title title="About">
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <div className="container flex justify-center basis-2/3">
           <Image
             src={profileImg}

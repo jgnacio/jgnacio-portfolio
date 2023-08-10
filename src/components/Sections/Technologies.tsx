@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SiTypescript,
   SiReact,
@@ -8,17 +10,29 @@ import {
   SiGooglecloud,
   SiDocker,
   SiGnubash,
+  SiPrisma,
+  SiMicrosoftazure,
 } from "react-icons/si";
 
 import { gsap } from "gsap";
-import { ReactNode, useRef, useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import horizontalLoop from "../utils/GSAPFunctions/HorizontalLoop";
 
 export default function Technologies() {
-  const wrapper = useRef(null);
-
+  const technologiesList = [
+    <SiTypescript size={"5vw"} />,
+    <SiJavascript size={"5vw"} />,
+    <SiReact size={"5vw"} />,
+    <SiNextdotjs size={"5vw"} />,
+    <SiNodedotjs size={"5vw"} />,
+    <SiPrisma size={"5vw"} />,
+    <SiPython size={"5vw"} />,
+    <SiGooglecloud size={"5vw"} />,
+    <SiMicrosoftazure size={"5vw"} />,
+    <SiDocker size={"5vw"} />,
+    <SiGnubash size={"5vw"} />,
+  ];
   useEffect(() => {
-
     const boxes = gsap.utils.toArray(".box") as ReactNode[];
 
     const loop = horizontalLoop(boxes, {
@@ -29,42 +43,17 @@ export default function Technologies() {
 
     return () => {
       loop.kill();
-    }
-  }, [])
-
+    };
+  }, []);
 
   return (
-    <div className=" flex overflow-x-hidden">
-      <div className="py-12" >
-        <div className="flex" ref={wrapper}>
-          <div className="box">
-            <SiTypescript className="text-4xl mx-4" size={60} />
+    <div className="flex overflow-x-hidden justify-center py-12">
+      <div className="flex flex-wrap gap-5">
+        {technologiesList.map((technology, index) => (
+          <div className="box" key={index}>
+            {technology}
           </div>
-          <div className="box">
-            <SiReact className="text-4xl mx-4" size={60} />
-          </div>
-          <div className="box">
-            <SiNextdotjs className="text-4xl mx-4" size={60} />
-          </div>
-          <div className="box">
-            <SiNodedotjs className="text-4xl mx-4" size={60} />
-          </div>
-          <div className="box">
-            <SiPython className="text-4xl mx-4" size={60} />
-          </div>
-          <div className="box">
-            <SiJavascript className="text-4xl mx-4" size={60} />
-          </div>
-          <div className="box">
-            <SiGooglecloud className="text-4xl mx-4" size={60} />
-          </div>
-          <div className="box">
-            <SiDocker className="text-4xl mx-4" size={60} />
-          </div>
-          <div className="box">
-            <SiGnubash className="text-4xl mx-4" size={60} />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

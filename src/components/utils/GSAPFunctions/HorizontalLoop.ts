@@ -1,13 +1,10 @@
 import { ReactNode } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 interface Config {
   repeat?: number;
   paused?: boolean;
   speed?: number;
-  paddingRight?: string;
-  snap?: number | boolean;
 }
 
 export default function horizontalLoop(
@@ -16,19 +13,8 @@ export default function horizontalLoop(
 ): gsap.core.Timeline {
   config = config || {};
 
-  const { repeat, paused, speed, paddingRight, snap } = config;
-
-  gsap.registerPlugin(ScrollTrigger);
 
   const tl = gsap.timeline(config);
-  tl.to(items, {
-    scrollTrigger: {
-      trigger: ".box",
-      start: "top bottom",
-      end: "bottom top",
-      markers: true,
-    },
-  });
 
   tl.to(items, {
     y: -10,
@@ -53,6 +39,15 @@ export default function horizontalLoop(
     },
     color: "#c04af2",
   });
+  tl.to(items, {
+    duration: 0.5,
+    color: "#55dd6e",
+    stagger: {
+      each: 0.1,
+      ease: "power1.Out",
+      from: "start"
+    },
+  })
 
   tl.to(items, {
     y: 0,
@@ -61,7 +56,7 @@ export default function horizontalLoop(
     yoyo: true,
     stagger: {
       each: 0.1,
-      ease: "power1.inOut",
+      ease: "power1.Out",
       from: "end",
     },
     color: "inherit",
