@@ -6,7 +6,7 @@ import Technologies from "@/components/Sections/Technologies";
 
 export default function Home() {
   return (
-    <main className=" flex flex-col text-sm md:text-base">
+    <main className="flex flex-col text-sm md:text-base">
       <Hero />
       <div className="p-4 md:px-48">
         <About />

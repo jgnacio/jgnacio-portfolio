@@ -19,9 +19,9 @@ export default function DisplayTechStack({
       <span className={`${zen.className} w-full text-lg mb-2`}>
         Technologies
       </span>
-      <div className="flex flex-col md:flex-row justify-center  text-xl md:text-3xl">
+      <div className="flex flex-wrap  text-xl md:text-3xl">
         {techStack.frontend && (
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-4">
             <span
               className={`${zen.className} flex justify-center text-lg bg-primary text-background`}
             >
@@ -38,7 +38,7 @@ export default function DisplayTechStack({
         )}
 
         {techStack.backend && (
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col mb-4">
             <span
               className={`${zen.className} flex justify-center text-lg bg-primary text-background`}
             >
@@ -54,7 +54,7 @@ export default function DisplayTechStack({
           </div>
         )}
         {techStack.deployment && (
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-4">
             <span
               className={`${zen.className} flex justify-center w-40 text-lg bg-primary text-background`}
             >
@@ -70,7 +70,7 @@ export default function DisplayTechStack({
           </div>
         )}
         {techStack.other && (
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-4">
             <span
               className={`${zen.className} flex justify-center w-40 text-lg bg-primary text-background`}
             >

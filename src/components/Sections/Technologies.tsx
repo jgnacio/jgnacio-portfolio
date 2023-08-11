@@ -20,17 +20,17 @@ import horizontalLoop from "../utils/GSAPFunctions/HorizontalLoop";
 
 export default function Technologies() {
   const technologiesList = [
-    <SiTypescript size={"5vw"} />,
-    <SiJavascript size={"5vw"} />,
-    <SiReact size={"5vw"} />,
-    <SiNextdotjs size={"5vw"} />,
-    <SiNodedotjs size={"5vw"} />,
-    <SiPrisma size={"5vw"} />,
-    <SiPython size={"5vw"} />,
-    <SiGooglecloud size={"5vw"} />,
-    <SiMicrosoftazure size={"5vw"} />,
-    <SiDocker size={"5vw"} />,
-    <SiGnubash size={"5vw"} />,
+    <SiTypescript />,
+    <SiJavascript />,
+    <SiReact />,
+    <SiNextdotjs />,
+    <SiNodedotjs />,
+    <SiPrisma />,
+    <SiPython />,
+    <SiGooglecloud />,
+    <SiMicrosoftazure />,
+    <SiDocker />,
+    <SiGnubash />,
   ];
   useEffect(() => {
     const boxes = gsap.utils.toArray(".box") as ReactNode[];
@@ -48,7 +48,7 @@ export default function Technologies() {
 
   return (
     <div className="flex overflow-x-hidden justify-center py-12">
-      <div className="flex flex-wrap gap-5">
+      <div className="flex flex-wrap justify-center p-2 gap-5 text-[12vw] md:text-[5vw]">
         {technologiesList.map((technology, index) => (
           <div className="box" key={index}>
             {technology}
