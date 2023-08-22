@@ -15,11 +15,11 @@ export default function DisplayTechStack({
   };
 }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col p-4">
       <span className={`${zen.className} w-full text-lg mb-2`}>
         Technologies
       </span>
-      <div className="flex flex-wrap  text-xl md:text-3xl">
+      <div className="flex flex-wrap text-xl md:text-3xl">
         {techStack.frontend && (
           <div className="flex flex-col mb-4">
             <span
@@ -36,7 +36,6 @@ export default function DisplayTechStack({
             </div>
           </div>
         )}
-
         {techStack.backend && (
           <div className="flex flex-col mb-4">
             <span

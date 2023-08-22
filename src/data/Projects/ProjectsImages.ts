@@ -15,9 +15,14 @@ export const projectsImages = {
         "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1691678391/jgnacio-portfolio/proyects/jultk477plwgn1oirvt5.png",
     },
     casmabil: {
-      main: "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1691680671/jgnacio-portfolio/proyects/e6wdilxvhc46vaoiuxtj.png",
+      main: "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1692705065/jgnacio-portfolio/proyects/gswhtxjmfiucwlofjvha.png",
       backgroundUrl:
-        "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1691680671/jgnacio-portfolio/proyects/e6wdilxvhc46vaoiuxtj.png",
+        "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1692705065/jgnacio-portfolio/proyects/gswhtxjmfiucwlofjvha.png",
+    },
+    jym: {
+      main: "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1692705143/jgnacio-portfolio/proyects/sk1wsamyr7tahvh9vfdh.png",
+      backgroundUrl:
+        "https://res.cloudinary.com/dyrtfx5rl/image/upload/v1692705143/jgnacio-portfolio/proyects/sk1wsamyr7tahvh9vfdh.png",
     },
   };
 

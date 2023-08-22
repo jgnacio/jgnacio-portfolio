@@ -84,4 +84,11 @@
   .title-clip-center {
     clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
   }
+  .clipped-footer {
+    background: url(https://res.cloudinary.com/dyrtfx5rl/image/upload/v1692282248/jgnacio-portfolio/videos/qhzxn1bpzdie0pd8sfht.gif);
+    background-size: cover;
+    -webkit-clip-path: url(#my-clip-path);
+    clip-path: url(#my-clip-path);
+    transform: scaleY(-1);
+  }
 }

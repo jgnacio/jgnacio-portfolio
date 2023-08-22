@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Coming_Soon, Zen_Dots } from "next/font/google";
-import DisplayTechStack from "./DisplayTechStack";
+import { Zen_Dots } from "next/font/google";
+import DisplayTechStack from "../../components/ui/ShowContent/DisplayTechStack";
 import { SiYoutube, SiGithub } from "react-icons/si";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -14,15 +14,15 @@ export default function RenderProject({
   projects: ProjectsListType;
 }) {
   return (
-    <div className="flex flex-col gap-5 md:gap-0">
+    <div className="flex flex-col gap-5 lg:gap-0">
       {projects.map((project, index) => (
         <div
-          className={`flex flex-col md:flex-row mb-5 md:mb-0 border-b-2 ${
+          className={`flex flex-col lg:flex-row mb-5 lg:mb-0 border-b-2 ${
             project.comingSoon ? "grayscale" : ""
           }`}
           key={index}
         >
-          <div className="relative w-full md:w-1/2 h-60 md:h-screen">
+          <div className="relative w-full lg:w-1/2 h-60 lg:h-screen">
             <Image
               className="-z-20"
               src={project.image.src}
@@ -38,8 +38,8 @@ export default function RenderProject({
               style={{ objectFit: "contain" }}
             />
           </div>
-          <div className="flex flex-col md:justify-center md:w-1/2 md:h-screen md:p-8 shadow-xl">
-            <h2 className={`${zen.className} text-lg md:text-4xl`}>
+          <div className="flex flex-col lg:justify-center lg:w-1/2 lg:h-screen lg:p-8 shadow-xl">
+            <h2 className={`${zen.className} text-lg lg:text-4xl`}>
               {project.title}
             </h2>
             {project.comingSoon && (

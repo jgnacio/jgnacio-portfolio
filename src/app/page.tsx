@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import About from "@/components/Sections/About";
 import Education from "@/components/Sections/Education";
 import Hero from "@/components/Sections/Hero";
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
       <Technologies />
       <Projects />
+      <Footer />
     </main>
   );
 }
