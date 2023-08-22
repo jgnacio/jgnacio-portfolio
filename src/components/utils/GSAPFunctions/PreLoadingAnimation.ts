@@ -4,8 +4,8 @@ import { gsap } from "gsap";
 export default function PreLoadingAnimation(
   items: ReactNode[]
 ) {
-  gsap.from(items, {
-    opacity: 0,
+  gsap.to(items, {
+    opacity: 1,
     duration: 0.3,
     stagger: {
       each: 0.03,

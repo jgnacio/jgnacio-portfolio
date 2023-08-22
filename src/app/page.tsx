@@ -7,13 +7,18 @@ import Hero from "@/components/Sections/Hero";
 import Projects from "@/components/Sections/Projects";
 import Technologies from "@/components/Sections/Technologies";
 import { useEffect, useState } from "react";
+import Loading from "./loading";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setTimeout(() => {
+      setMounted(true);
+    }, 1500);
+  }, []);
   return (
     <main className="flex flex-col text-sm md:text-base">
-      {mounted && (
+      {mounted ? (
         <>
           <Hero />
           <div className="p-4 md:px-48">
@@ -24,6 +29,8 @@ export default function Home() {
           <Projects />
           <Footer />
         </>
+      ) : (
+        <Loading />
       )}
     </main>
   );
