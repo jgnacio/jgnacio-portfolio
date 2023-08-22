@@ -17,20 +17,21 @@ import {
 import { gsap } from "gsap";
 import { ReactNode, useEffect } from "react";
 import horizontalLoop from "../utils/GSAPFunctions/HorizontalLoop";
+import { keyGenerator } from "@/lib/keyGenerator";
 
 export default function Technologies() {
   const technologiesList = [
-    <SiTypescript />,
-    <SiJavascript />,
-    <SiReact />,
-    <SiNextdotjs />,
-    <SiNodedotjs />,
-    <SiPrisma />,
-    <SiPython />,
-    <SiGooglecloud />,
-    <SiMicrosoftazure />,
-    <SiDocker />,
-    <SiGnubash />,
+    <SiTypescript key={keyGenerator()} />,
+    <SiJavascript key={keyGenerator()} />,
+    <SiReact key={keyGenerator()} />,
+    <SiNextdotjs key={keyGenerator()} />,
+    <SiNodedotjs key={keyGenerator()} />,
+    <SiPrisma key={keyGenerator()} />,
+    <SiPython key={keyGenerator()} />,
+    <SiGooglecloud key={keyGenerator()} />,
+    <SiMicrosoftazure key={keyGenerator()} />,
+    <SiDocker key={keyGenerator()} />,
+    <SiGnubash key={keyGenerator()} />,
   ];
   useEffect(() => {
     const boxes = gsap.utils.toArray(".box") as ReactNode[];

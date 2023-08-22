@@ -1,11 +1,9 @@
-"use client";
 import "./globals.css";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/utils/Provider";
 import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
-import { useEffect, useState } from "react";
 
 const imb_plex_mono = IBM_Plex_Mono({ subsets: ["latin"], weight: "400" });
 export const metadata: Metadata = {
@@ -14,19 +12,13 @@ export const metadata: Metadata = {
 };
 
 function RootLayout({ children }: { children: ReactNode }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={`${imb_plex_mono.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {mounted && (
-            <>
-              <Navbar />
-              {children}
-            </>
-          )}
+          <Navbar />
+          {children}
         </ThemeProvider>
       </body>
     </html>

@@ -3,7 +3,6 @@ import {
   SiMysql,
   SiNextdotjs,
   SiPython,
-  SiNodedotjs,
   SiGooglecloud,
   SiDocker,
   SiPrisma,
@@ -21,8 +20,11 @@ import {
 } from "react-icons/si";
 
 import { projectsImages } from "./ProjectsImages";
+import { ProjectsListType } from "@/types/Projects";
+import { ReactNode } from "react";
+import { keyGenerator } from "@/lib/keyGenerator";
 
-export const projects = [
+export const projects: ProjectsListType = [
   {
     title: "Machine Learning Operations (MLOps) Challenge",
     description:
@@ -37,8 +39,14 @@ export const projects = [
       alt: "Machine Learning Operations (MLOps) Challenge project",
     },
     techStack: {
-      backend: [<SiPython />, <SiScikitlearn />],
-      deployment: [<SiMicrosoftazure />, <SiGithubactions />],
+      backend: [
+        <SiPython key={keyGenerator()} />,
+        <SiScikitlearn key={keyGenerator()} />,
+      ],
+      deployment: [
+        <SiMicrosoftazure key={keyGenerator()} />,
+        <SiGithubactions key={keyGenerator()} />,
+      ],
     },
   },
   {
@@ -55,16 +63,23 @@ export const projects = [
       alt: "Smart ABA project",
     },
     techStack: {
-      frontend: [<SiNextdotjs />, <SiTailwindcss />, <SiDaisyui />],
-      backend: [
-        <SiTypescript />,
-        <SiPrisma />,
-        <SiExpress />,
-        <SiAxios />,
-        <SiFirebase />,
-        <SiPostgresql />,
+      frontend: [
+        <SiNextdotjs key={keyGenerator()} />,
+        <SiTailwindcss key={keyGenerator()} />,
+        <SiDaisyui key={keyGenerator()} />,
       ],
-      deployment: [<SiDocker />, <SiGooglecloud />],
+      backend: [
+        <SiTypescript key={keyGenerator()} />,
+        <SiPrisma key={keyGenerator()} />,
+        <SiExpress key={keyGenerator()} />,
+        <SiAxios key={keyGenerator()} />,
+        <SiFirebase key={keyGenerator()} />,
+        <SiPostgresql key={keyGenerator()} />,
+      ],
+      deployment: [
+        <SiDocker key={keyGenerator()} />,
+        <SiGooglecloud key={keyGenerator()} />,
+      ],
     },
   },
   {
@@ -81,7 +96,7 @@ export const projects = [
       alt: "Unix Shell project",
     },
     techStack: {
-      backend: [<SiC />],
+      backend: [<SiC key={keyGenerator()} />],
     },
   },
   {
@@ -96,13 +111,19 @@ export const projects = [
     },
     techStack: {
       frontend: [
-        <SiNextdotjs />,
-        <SiTypescript />,
-        <SiTailwindcss />,
-        <SiDaisyui />,
+        <SiNextdotjs key={keyGenerator()} />,
+        <SiTypescript key={keyGenerator()} />,
+        <SiTailwindcss key={keyGenerator()} />,
+        <SiDaisyui key={keyGenerator()} />,
       ],
-      backend: [<SiExpress />, <SiMysql />],
-      deployment: [<SiDocker />, <SiMicrosoftazure />],
+      backend: [
+        <SiExpress key={keyGenerator()} />,
+        <SiMysql key={keyGenerator()} />,
+      ],
+      deployment: [
+        <SiDocker key={keyGenerator()} />,
+        <SiMicrosoftazure key={keyGenerator()} />,
+      ],
     },
   },
   {
@@ -117,14 +138,20 @@ export const projects = [
     },
     techStack: {
       frontend: [
-        <SiNextdotjs />,
-        <SiTypescript />,
-        <SiTailwindcss />,
-        <SiDaisyui />,
-        <SiMui />,
+        <SiNextdotjs key={keyGenerator()} />,
+        <SiTypescript key={keyGenerator()} />,
+        <SiTailwindcss key={keyGenerator()} />,
+        <SiDaisyui key={keyGenerator()} />,
+        <SiMui key={keyGenerator()} />,
       ],
-      backend: [<SiMysql />, <SiPrisma />],
-      deployment: [<SiDocker />, <SiGooglecloud />],
+      backend: [
+        <SiMysql key={keyGenerator()} />,
+        <SiPrisma key={keyGenerator()} />,
+      ],
+      deployment: [
+        <SiDocker key={keyGenerator()} />,
+        <SiGooglecloud key={keyGenerator()} />,
+      ],
     },
   },
 ];

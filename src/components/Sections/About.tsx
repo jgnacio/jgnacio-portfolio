@@ -22,8 +22,8 @@ export default function About() {
         </div>
         <div className="flex justify-center items-center px-4 basis-1/2">
           <p className=" p-4">
-            Hello! I'm <b>Ignacio Gómez</b>, a passionate and skilled software
-            engineer recently graduated from{" "}
+            Hello! I&apos;m <b>Ignacio Gómez</b>, a passionate and skilled
+            software engineer recently graduated from{" "}
             <b className="italic">Holberton School</b>. With a strong foundation
             in computer science and a curiosity for cutting-edge technologies, I
             am dedicated to creating innovative and efficient software
